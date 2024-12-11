@@ -1,0 +1,23 @@
+{
+	# Global options block
+	# Optional: insert global options here
+}
+
+:80 {
+	# Serve static files from the current directory
+	root * .
+	file_server
+
+	log {
+		output stderr
+	}
+
+	# Forward requests to /api to another server
+	handle_path /api/* {
+		reverse_proxy http://192.168.88.135:11434
+	}
+
+	handle /rsvp/* {
+		reverse_proxy localhost:3000
+	}
+}

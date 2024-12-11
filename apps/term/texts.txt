@@ -1,0 +1,21 @@
+
+
+Welcome. 
+
+Bring out the hacker in you and use the terminal below to find info and rsvp to celebrate 0110's - aka Joren's - 40th.
+  
+
+
+$ rsvp
+
+
+Your name:
+
+Number of people attending:
+
+Your hacker alias:
+
+
+
+$info 
+

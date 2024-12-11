@@ -1,0 +1,8 @@
+-- CreateTable
+CREATE TABLE "Response" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "name" TEXT NOT NULL,
+    "message" TEXT,
+    "attend" BOOLEAN NOT NULL DEFAULT false
+);
