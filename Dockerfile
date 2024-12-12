@@ -23,4 +23,6 @@ RUN chmod +x /startup_script.sh
 
 COPY Caddyfile /etc/caddy/Caddyfile
 
+
+
 ENTRYPOINT ["/startup_script.sh"]

@@ -5,16 +5,22 @@
 
 :80 {
 	# Serve static files from the current directory
-	root * /var/www/apps/term
-	file_server
+	root * /var/www/apps/term/
+	file_server browse
 
 	log {
-		output stderr
+		output stdout
 	}
 
 	# Forward requests to /api to another server
-	handle_path /api/* {
-		reverse_proxy http://192.168.88.135:11434
+	#
+	#handle_path /api/* {
+	#	reverse_proxy http://192.168.88.135:11434
+	#}
+	#*/
+
+	handle /api/* {
+		reverse_proxy localhost:3000
 	}
 
 	handle /rsvp/* {
