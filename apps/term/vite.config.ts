@@ -15,14 +15,16 @@ export default defineConfig({
     port: 4300,
     host: 'localhost',
   },
+  publicDir: './public',
   plugins: [vue(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md'])],
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [ nxViteTsPaths() ],
-  // },
   build: {
     outDir: '../../dist/apps/term',
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        app: './main.html',
+      },
+    },
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,

@@ -5,7 +5,7 @@
 
 :80 {
 	# Serve static files from the current directory
-	root * .
+	root * /var/www/apps/term
 	file_server
 
 	log {
